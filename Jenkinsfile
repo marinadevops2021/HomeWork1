@@ -23,12 +23,10 @@ pipeline {
     stage('Terraform Apply'){
         when { anyOf {branch "master";branch "dev"} }
         steps {
-            copyArtifacts filter: 'infra/dev/terraform.tfstate', projectName: 'HomeWork1'
             sh '''
             cd infra/dev
             terraform apply -auto-approve
             '''
-            archiveArtifacts artifacts: 'infra/dev/terraform.tfstate', onlyIfSuccessful: true
         }
     }
   }
