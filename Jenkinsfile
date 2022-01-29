@@ -40,7 +40,7 @@ pipeline {
             else
                 INFRA_ENV=infra/dev
             fi
-            cd $INFRA_ENV
+            cd infra/dev
             terraform apply -auto-approve
             '''
             archiveArtifacts artifacts: 'infra/dev/terraform.tfstate', onlyIfSuccessful: true
