@@ -31,7 +31,7 @@ pipeline {
             sh '''
             copyArtifacts filter: 'infra/dev/terraform.tfstate', projectName: 'HomeWork1'
             sh '''
-            if [ "$BRANCH_NAME" = "master" ] || [ "$CHANGE_TARGET" = "master" ]; then
+            if ( "$BRANCH_NAME" = "master" ) || ( "$CHANGE_TARGET" = "master" ); then
                 INFRA_ENV=infra/prod
             else
                 INFRA_ENV=infra/dev
