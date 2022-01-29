@@ -3,8 +3,6 @@ pipeline {
   options {
         copyArtifactPermission('HomeWork1');
     }
-    stages{'Terraform Init & Plan','Terraform Apply'}
-
 
   stages {
     stage('Terraform Init & Plan'){
