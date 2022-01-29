@@ -2,13 +2,6 @@ pipeline {
   agent any
 
   stages {
-    stage('infra only') {
-        when { changeset "infra/**"}
-        steps {
-            echo "infra folder has been changed"
-        }
-    }
-
     stage('Terraform Init & Plan'){
         when { anyOf {branch "master";branch "dev";changeRequest()} }
         steps {
