@@ -1,6 +1,7 @@
 pipeline {
   agent any
 
+
   stages {
     stage('Terraform Init & Plan'){
         when { anyOf {branch "master";branch "dev";changeRequest()} }
