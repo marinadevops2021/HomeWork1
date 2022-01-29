@@ -1,10 +1,6 @@
 pipeline {
   agent any
 
-// Don't forget to make use in the relevant places:
-// copyArtifacts filter: '...your..terraform..state..path...', projectName: '${JOB_NAME}'
-// archiveArtifacts artifacts: '...your..terraform..state..path...', onlyIfSuccessful: true
-
   stages {
     stage('Terraform Init & Plan'){
         when { anyOf {branch "master";branch "dev";changeRequest()} }
@@ -24,22 +20,11 @@ pipeline {
 
     stage('Terraform Apply'){
         when { anyOf {branch "master";branch "dev"} }
-        input {
-            message "Do you want to proceed for infrastructure provisioning?"
-        }
         steps {
             sh '''
-            copyArtifacts filter: 'infra/dev/terraform.tfstate', projectName: 'HomeWork1'
-            sh '''
-            if [ "$BRANCH_NAME" = "master" ] || [ "$CHANGE_TARGET" = "master" ]; then
-                INFRA_ENV=infra/prod
-            else
-                INFRA_ENV=infra/dev
-            fi
-            cd $INFRA_ENV
+            cd infra/dev
             terraform apply -auto-approve
             '''
-            archiveArtifacts artifacts: 'infra/dev/terraform.tfstate', onlyIfSuccessful: true
         }
     }
   }
