@@ -38,7 +38,6 @@ pipeline {
             fi
             cd $INFRA_ENV
             terraform apply -auto-approve
-
             '''
             archiveArtifacts artifacts: 'infra/dev/terraform.tfstate', onlyIfSuccessful: true
         }
