@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb4fd3c0-fa92-4bd1-aa79-7a7e892a7039" name="Changes" comment="">
+    <list default="true" id="eb4fd3c0-fa92-4bd1-aa79-7a7e892a7039" name="Changes" comment="error 4">
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643441543387</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="error 4">
+      <created>1643442104879</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643442104879</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="copy repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="copy repo" />
+    <MESSAGE value="error 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="error 4" />
   </component>
 </project>
