@@ -22,17 +22,9 @@ pipeline {
 
     stage('Terraform Apply'){
         when { anyOf {branch "master";branch "dev"} }
-        input {
-            message "Do you want to proceed for infrastructure provisioning?"
-        }
         steps {
             copyArtifacts filter: 'infra/dev/terraform.tfstate', projectName: 'HomeWork1'
             sh '''
-            if [ "$BRANCH_NAME" = "master" ] || [ "$CHANGE_TARGET" = "master" ]; then
-                INFRA_ENV=infra/prod
-            else
-                INFRA_ENV=infra/dev
-            fi
             cd infra/dev
             terraform apply -auto-approve
             '''
