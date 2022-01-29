@@ -16,7 +16,8 @@ pipeline {
                 cd infra/dev
             fi
 
-            # YOUR COMMANDS HERE
+            terraform init
+            terraform plan
             '''
         }
     }
@@ -28,15 +29,17 @@ pipeline {
         }
         steps {
             sh '''
+            copyArtifacts filter: 'infra/dev/terraform.tfstate', projectName: 'HomeWork1'
+            sh '''
             if [ "$BRANCH_NAME" = "master" ] || [ "$CHANGE_TARGET" = "master" ]; then
                 INFRA_ENV=infra/prod
             else
                 INFRA_ENV=infra/dev
             fi
-
-
-            # YOUR COMMANDS HERE
+            cd $INFRA_ENV
+            terraform apply -auto-approve
             '''
+            archiveArtifacts artifacts: 'infra/dev/terraform.tfstate', onlyIfSuccessful: true
         }
     }
   }
