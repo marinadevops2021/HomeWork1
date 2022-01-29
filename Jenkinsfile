@@ -1,7 +1,7 @@
 pipeline {
   agent any
   options {
-        copyArtifactPermission('HomeWork1');
+        copyArtifactPermission('dev.HomeWork1');
     }
 
   stages {
