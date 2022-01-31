@@ -11,7 +11,7 @@ pipeline {
 //             sh '''
 //             cd infra/dev
 //             terraform init
-//             terraform plan
+//             terraform planZZZ
 //             '''
 //         }
 //     }
