@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb4fd3c0-fa92-4bd1-aa79-7a7e892a7039" name="Changes" comment="error 24">
+    <list default="true" id="eb4fd3c0-fa92-4bd1-aa79-7a7e892a7039" name="Changes" comment="error 26">
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +253,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643647813729</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="error 25">
+      <created>1643647893228</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1643647893228</updated>
+    </task>
+    <task id="LOCAL-00029" summary="error 26">
+      <created>1643648135048</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1643648135048</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,6 +304,8 @@
     <MESSAGE value="error 22" />
     <MESSAGE value="error 23" />
     <MESSAGE value="error 24" />
-    <option name="LAST_COMMIT_MESSAGE" value="error 24" />
+    <MESSAGE value="error 25" />
+    <MESSAGE value="error 26" />
+    <option name="LAST_COMMIT_MESSAGE" value="error 26" />
   </component>
 </project>
