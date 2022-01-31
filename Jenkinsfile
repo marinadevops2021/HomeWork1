@@ -10,8 +10,6 @@ pipeline {
 
             sh '''
             if [ "$BRANCH_NAME" = "master" ] || [ "$CHANGE_TARGET" = "master" ]; then
-                cd infra/prod
-            else
                 cd infra/dev
             fi
 
