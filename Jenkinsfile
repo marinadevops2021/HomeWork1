@@ -9,10 +9,7 @@ pipeline {
             copyArtifacts filter: 'infra/dev/terraform.tfstate', projectName: '${JOB_NAME}'
 
             sh '''
-            if [ "$BRANCH_NAME" = "master" ] || [ "$CHANGE_TARGET" = "master" ]; then
-                cd infra/dev
-            fi
-
+            cd infra/dev
             terraform init
             terraform plan
             '''
@@ -27,11 +24,6 @@ pipeline {
         steps {
             copyArtifacts filter: 'infra/dev/terraform.tfstate', projectName: '${JOB_NAME}'
             sh '''
-            if [ "$BRANCH_NAME" = "master" ] || [ "$CHANGE_TARGET" = "master" ]; then
-                INFRA_ENV=infra/prod
-            else
-                INFRA_ENV=infra/dev
-            fi
             cd infra/dev
             terraform apply -auto-approve
             '''
