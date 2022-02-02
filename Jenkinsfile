@@ -25,7 +25,6 @@ pipeline {
                 else
                     cd infra/dev
                 fi
-                echo ${JOB_NAME}
                 terraform init
                 terraform plan
                 '''
