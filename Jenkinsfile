@@ -32,7 +32,6 @@ pipeline {
         }
 
 
-
         stage('Terraform Apply - dev'){
             when { anyOf {branch "dev"} }
             steps {
